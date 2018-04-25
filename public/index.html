@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cricket Game</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img src="images/w11.jpg" alt="">
+    </div>
+    <h1>Welcome To The Game</h1>
+    <div class="container-fluid my-3">
+
+        
+        <div class="row" id="form">
+            <div class="col-12">
+                <form class="form" onSubmit="return tossDecided()">
+                    <div class="form-group">
+                        <label for="user-team">Enter Your Team Name: </label>
+                        <input type="text" id="user-team" class="form-control" placeholder="User team..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="op-team">Enter Opposite Team Name: </label>
+                        <input type="text" id="op-team" class="form-control" placeholder="Opposite team..." required>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="toss" value="heads" checked> Heads</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="toss" value="tails"> Tails</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-info" value="Toss">
+                        <span id="toss-error"></span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        
+
+
+
+        <div class="row bg-light" id="choose-user">
+            <div class="col-md-8 mx-auto text-center">
+                <h1></h1>
+                <h2></h2>
+                <h3>What you want to Chose</h3>
+                <button class="btn btn-danger btn-lg" id="special">Bat</button>
+                <button class="btn btn-danger btn-lg">Ball</button>
+            </div>
+        </div>
+
+
+
+        <div class="row bg-light" id="choose-op">
+            <div class="col-md-12 mx-auto text-center">
+                <h2></h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="row" id="btn-start">
+            <div class="col-md-8 mx-auto">
+                <button class="btn btn-success btn-lg" onClick="startGame()">Let's Begin</button>
+            </div>
+        </div>
+
+        <div class="row" id="scoreboard">
+            <div class="col-md-8 mx-auto">
+                <p id="team-playing"></p>
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Score Board</div>
+                    <div class="card-body" id="score-content">
+                        <div class="row">
+                            <span class="col-md-4"></span>
+                            <span class="col-md-4"></span>
+                            <span class="col-md-4"></span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-primary"></div>
+                </div>
+            </div>
+            <div class="col-md-8 mx-auto my-2">
+                <button class="btn btn-danger" onClick="updateBoard()" id="next-ball">Next Ball</button>
+                <button class="btn btn-danger" onClick="startGame()" id="next-inning">Next Inning</button>
+                <p class="my-2 text-center" id="comments"></p>
+            </div>
+            <div class="col-12 mx-auto my-2 text-center">
+                <button class="btn btn-primary btn-lg" onClick="reloadPage()" id="reload-btn">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+    <script src="js/jquery.min.js"></script>
+</body>
+</html>

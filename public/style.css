@@ -1,0 +1,37 @@
+.navbar .container a{
+color: black;
+font-weight: bold;
+}
+#toss-error{
+color: red;
+}
+#choose-user,#choose-op{
+padding-top: 40px;
+padding-bottom: 40px;  
+}
+#choose-user,#choose-op,#btn-start,#scoreboard,#reload-btn{
+display: none;
+}
+
+#comments{
+color: red;
+}
+@media (max-width: 575px){
+h1{
+font-size: 1.7em;
+text-align: center;
+}
+h2{
+font-size: 1.3em;
+}
+h3{
+font-size: 1em;
+}
+
+#special{
+    display: hidden
+}
+
+.navbar-brand{
+    text-align: center
+}
